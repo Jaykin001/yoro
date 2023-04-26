@@ -1,0 +1,1665 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - start
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - good night
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: | 
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+# ======================================CRM=============================================================
+
+# Question 1
+- intent: crm_list_leads
+  examples: |
+    - Can you show me a list of all the leads we have in our CRM system?
+    - list of all the leads
+    - What leads do we currently have in our CRM system?
+    - I'd like to see a list of the leads in our database, please.
+    - Can you show me all the leads that have been added to our CRM system?
+    - Is there a way to view a comprehensive list of all the leads in our CRM?
+    - I need to know which leads are in our CRM system. Could you help me with that?
+    - How can I access a list of all the leads stored in our CRM database?
+    - Please provide me with a list of the leads that we have in our CRM system.
+    - Give me a summary of all the leads in our CRM.
+    - Can you tell me who the potential clients are in our CRM system?
+    - How many leads do we have in our database?
+    - Show me a roster of all the leads in our CRM.
+    - Provide me with a list of all the prospects in our CRM.
+    - Can you give me an overview of the leads in our system?
+    - I would like to see a catalog of all the potential customers we have in our CRM.
+
+# Question 2
+- intent: crm_unfollowed_leads
+  examples: |
+    - Which leads have not been followed up with in the last week?
+    - leads have not been followed up with in the last week
+    - Can you show me a list of leads that haven't been followed up with in the last week?
+    - I'm interested in seeing which leads we've neglected in the past week. Can you help me with that?
+    - Which leads in our CRM system have not been contacted in the last seven days?
+    - Is there a way to find out which leads we've missed following up with in the past week?
+    - Please provide me with a list of the commandows that have not been followed up with in the last week.
+    - How can I see which leads we have not reached out to in the past seven days?
+    - I need to know which leads require follow-up in the coming week. Can you tell me which ones we've missed so far?
+    - Give me a rundown of the leads that we have not followed up with in the past week.
+    - Can you show me a list of the leads that require follow-up?
+    - How many leads have we not contacted in the last seven days?
+    - Provide me with a list of the leads that we have not interacted with recently.
+    - Which leads have we missed following up with in the past week?
+    - Show me a summary of the leads that require follow-up in the next week.
+    - Can you tell me which leads have fallen through the cracks in the past seven days?
+
+# Question 3
+- intent: crm_sales_opportunities_summary
+  examples: |
+    - Can you provide a summary of the sales opportunities we have in the pipeline?
+    - summary of the sales opportunities
+    - What are the current sales opportunities we have in the pipeline?
+    - Can you give me an overview of the sales leads we're working on?
+    - I'm curious about the potential sales we have coming up. Can you summarize them for me?
+    - How many sales opportunities are we actively pursuing at the moment?
+    - Could you provide a brief summary of the status of our sales pipeline?
+    - Can you tell me what types of sales opportunities we're currently focusing on?
+    - I'd like to get a better understanding of the sales opportunities we have in the works. Could you summarize them for me?
+    - What's the total value of the sales opportunities we're currently pursuing?
+    - Give me a rundown of our current sales pipeline.
+    - How many sales leads do we have in our system right now?
+    - Can you give me an update on our current sales prospects?
+    - What's the status of our sales pipeline?
+    - Can you provide me with an overview of our sales pipeline?
+    - I'd like to know more about the sales opportunities we're pursuing. Can you provide me with a summary?
+    - What is the value of our sales pipeline?
+    - Can you tell me about the sales opportunities we have in progress right now?
+
+# Question 4
+- intent: crm_opportunity_status
+  examples: |
+    - What is the status of the [business opportunity](opp_syn) for [Gemini Furniture](cname)?
+    - What is the status of the [potential customer](lead_syn) for [Ready Mat](cname)?
+    - Can you tell me the status of the [sales lead](opp_syn) for [ABC Company](cname)?
+    - Can you tell me the current status of the [prospect](lead_syn) for customer X(cname)?
+    - What is the update on the [sales opportunity](opp_syn) for customer X(cname)?
+    - Could you provide me with the latest information on the [sales prospect](lead_syn) for customer X(cname)?
+    - I'm interested in knowing the status of the [business opportunity](opp_syn) we have with customer X(cname). Can you give me an update?
+    - How is the [potential customer](lead_syn) with customer X(cname) progressing?
+    - What is the current stage of the [sales lead](opp_syn) for customer X(cname) in our CRM system?
+    - Is there any news on the [sales opportunity](opp_syn) for customer X(cname)? Can you give me an update?
+
+# Question 5
+- intent: crm_deals_report
+  examples: |
+    - Can you show me a report of all the deals that were won or lost in the last month?
+    - all the deals that were won or lost in the last month
+    - What deals were won or lost in the last month?
+    - Give me a report of the deals that were won or lost in the last month.
+    - I need to see a report of all the deals that were won or lost in the last month. Can you help me with that?
+    - Can you provide me with a breakdown of the deals that were either won or lost in the past month?
+    - Is there a way to get a report on all the deals that closed in the last 30 days?
+    - Could you show me a summary of the deals that we won or lost in the previous month?
+    - I'm interested in seeing a report of all the deals that were either won or lost in the last month. How can I access that information?
+    - Can you give me an overview of the deals that were either won or lost in the last 30 days?
+    - Please generate a report that lists all the deals that were either won or lost in the previous month.
+
+# Question 6
+- intent: crm_count_entries_action
+  examples: |
+    - What is the current value of the sales orders that are waiting to be invoiced?
+    - value of the sales orders that are waiting to be invoiced
+    - Can you tell me the total value of sales orders that are waiting to be invoiced?
+    - What is the current value of the sales orders that have not been invoiced yet?
+    - Could you provide me with the total amount of pending sales orders?
+    - How much revenue is pending from sales orders that are yet to be invoiced?
+    - What is the total value of the sales orders that have been placed but not invoiced yet?
+    - Is there a way to see the total value of the sales orders that are waiting to be invoiced?
+    - Can you give me an idea of how much money is tied up in sales orders that are waiting to be invoiced?
+
+# Question 7
+- intent: crm_uncontacted_customers_last_month
+  examples: |
+    - Which customers have not been contacted in the last month?
+    - customers have not been contacted in the last month
+    - Can you give me a list of customers who have not been contacted in the last month?
+    - Which customers in our CRM system have not been contacted in the past 30 days?
+    - Could you show me a report of customers that we haven't contacted in the last month?
+    - I'm interested in knowing which customers we have not reached out to in the past month. Can you provide me with that information?
+    - Is there a way to find out which customers we haven't contacted in the last 4 weeks?
+    - Please provide me with a list of customers who have not been contacted in the past month.
+    - Can you generate a report that shows the customers who have not been contacted in the last 30 days?
+
+# Question 8
+- intent: crm_top_customers_by_revenue_current_year
+  examples: |
+    - I need to see a list of the top 10 customers by revenue for the current year. Can you help me with that?
+    - Can you provide me with a report that lists our top 10 customers by revenue for this year?
+    - Which customers have generated the most revenue for us this year? Can you give me a list of the top 10?
+    - Could you show me the top 10 customers by revenue for the current year?
+    - customers by revenue for the current year
+    - What are our top 10 revenue-generating customers for the current year?
+    - Is there a way to see a list of our top customers by revenue for this year?
+    - Can you generate a report that shows the top 10 customers by revenue for the current year?
+  
+# Question 9
+- intent: crm_average_time_salesteam
+  examples: |
+    - What is the average time it takes for our sales team to close a deal?
+    - How long does it typically take for our sales team to close a sale?
+    - What is the average sales cycle time for our sales team?
+    - sales cycle time for our sales
+    - Can you provide me with data on the average time it takes for our sales team to convert leads into customers?
+    - What is the average length of our sales pipeline from lead generation to deal closure?
+    - How does the average time to close a deal vary across our different product lines?
+    - What steps can we take to reduce the average time it takes for our sales team to close deals?
+    
+# Question 10
+- intent: crm_salesperson_highest_win_rate
+  examples: |
+    - Which salesperson has the highest win rate?
+    - the top-performing salesperson in terms
+    - Who is the top-performing salesperson in terms of win rate?
+    - Can you provide me with a report on the win rates of our sales team members?
+    - Which sales representative has the best success rate in closing deals?
+    - How does the win rate vary across different sales territories and regions?
+    - What strategies do the salespeople with the highest win rates use that others could learn from?
+    - How does the win rate of individual salespeople compare to the overall win rate of our sales team?
+    - Is there a correlation between the number of deals closed and a salesperson's win rate?
+    - Can we identify any trends or patterns in the sales strategies used by the salespeople with the highest win rates?
+
+# Question 11
+- intent: crm_salesperson_number_sales_done
+  examples: |
+    - Sales person wise number of sales done
+    - Which salesperson has the highest number of sales?
+    - Can you provide me with a breakdown of the number of sales made by each member of our sales team?
+    - How does the number of sales made by each salesperson vary across different product lines and services?
+    - What percentage of our total sales are attributed to each salesperson?
+    - How does the number of sales made by each salesperson compare to their sales targets?
+    - Is there a correlation between the length of time a salesperson has been with the company and the number of sales they have made?
+    - Can we identify any trends or patterns in the sales strategies used by the salespeople with the highest number of sales?
+    - What steps can we take to help our lower-performing salespeople increase the number of sales they are making?
+
+# Question 12
+- intent: crm_products_selling_most
+  examples: |
+    - Which products are selling the most 
+    - What are the top-selling products this quarter?
+    - Can you show me a report of our best-selling products?
+    - Which products have the highest sales volume?
+    - What are our most popular products?
+    - Which products are driving the most revenue?
+    - Can you tell me which products have the highest demand?
+    - Which products are customers buying the most frequently?
+    - What products are performing well in our sales channels?
+    - Which items have the highest sales velocity?
+    - Can you provide a list of the top-selling SKUs?
+    
+# Question 13
+- intent: crm_revenue_quarter_this_year
+  examples: |
+    - Can you provide the total revenue generated for each quarter of this year ? 
+    - provide the total revenue generated for each quarter of this year
+    - revenue generated for each quarter of this year
+    - What was the revenue for each quarter this year?
+    - Can you give me a breakdown of revenue by quarter for this year?
+    - What are the sales figures for each quarter of this year?
+    - I'm interested in seeing the quarterly revenue for this year. Can you help me with that?
+    - How much revenue was generated in each quarter of this year?
+    - Please provide me with the total revenue generated for each quarter this year.
+
+# =================================================//CRM//==================================================
+
+
+# =================================================sales==================================================
+
+# Question 1
+- intent: sale_total_revenue_quarter
+  examples: |
+    - What is the total revenue generated this quarter?
+    - earnings generated this quarter
+    - total proceeds generated this quarter
+    - Can you tell me the total revenue for this quarter?
+    - How much revenue did we generate this quarter?
+    - What was the total sales revenue this quarter?
+    - Could you give me an update on our revenue for this quarter?
+    - What is the total revenue earned in the current quarter?
+    - Can you provide me with the total sales revenue for this quarter?
+    - I'd like to know the total revenue for this quarter, could you please tell me?
+    - What was the total revenue generated for the current quarter?
+    - How much revenue did we make this quarter?
+    - Can you give me an update on our total revenue for this quarter?
+
+# Question 2
+- intent: sale_highest_sales_volume_year
+  examples: |
+    - Which product has the highest sales volume this year?
+    - product highest sales volume this year
+    - What product has sold the most in terms of volume this year?
+    - Could you tell me which product has had the highest sales volume this year?
+    - I'm curious, which product has had the most sales volume this year?
+    - What was the product with the highest sales volume this year?
+    - Can you give me information on the product with the most sales volume this year?
+    - I'd like to know which product had the highest sales volume this year, could you please tell me?
+    - Which product had the most sales volume this year, and how much did it sell?
+    - Can you tell me which product had the highest sales volume this year, and by how much?
+    - What product had the largest volume of sales this year, and what was the total quantity sold?
+    - I'm interested in knowing which product had the highest sales volume this year, can you provide me with that information?
+
+# Question 3
+- intent: sale_average_delivery_time
+  examples: |
+    - What is the average delivery time for fulfilling orders this year? 
+    - average delivery time fulfilling orders
+    - What is the average order fulfillment time for this year?
+    - Could you provide me with the average delivery time for fulfilling orders this year?
+    - How long does it take on average to fulfill orders this year?
+    - What is the average time it takes to deliver orders this year?
+    - Can you tell me the average order delivery time for this year?
+    - What is the average time it takes to fulfill an order in the current year?
+    - Could you give me an update on the average delivery time for this year?
+    - I'd like to know the average time it takes to fulfill orders this year, could you please tell me?
+    - What is the average order processing time for this year?
+    - Can you give me an update on the average order fulfillment time for this year?
+
+# Question 4
+- intent: sale_number_orders_month
+  examples: |
+    - What is the total number of orders received this month? 
+    - total number of orders received
+    - How many orders did we receive this month?
+    - Can you tell me the total number of orders for this month?
+    - What's the count of orders received this month?
+    - I'm curious, how many orders were placed this month?
+    - What's the total number of orders for this current month?
+    - Could you provide me with the total orders received this month?
+    - How many orders have we received so far this month?
+
+# Question 5
+- intent: sale_revenue_by_salesperson
+  examples: |
+    - What is the sales revenue by salesperson for this quarter?
+    - sales revenue by salesperson
+    - Can you give me an update on the sales revenue by salesperson for this quarter?
+    - How much sales revenue did each salesperson generate this quarter?
+    - I'm curious about the sales revenue by salesperson for this quarter, can you tell me more?
+    - What was the total sales revenue generated by each salesperson this quarter?
+    - Could you provide me with the sales revenue by salesperson for this quarter?
+    - Can you give me a breakdown of the sales revenue by salesperson for this quarter?
+    - What were the sales revenues by salesperson for this quarter?
+    - How much sales revenue did each member of the sales team generate this quarter?
+    - Can you tell me how the sales revenue is distributed among the sales team members this quarter?
+
+# Question 6
+- intent: sale_count_credit_sales
+  examples: |
+    - What percentage of sales were made on credit this month?
+    - sales were made on credit
+    - How many sales transactions were made on credit this quarter?
+    - Could you tell me the percentage of credit sales for the last six months?
+    - What portion of our total revenue came from credit sales last year?
+    - Can you provide me with the breakdown of credit sales versus cash sales for this month?
+    - What percentage of our total sales for the year were made on credit?
+    - I'm curious about the percentage of credit sales compared to debit sales for the previous month. Could you provide that information?
+    - How does the percentage of credit sales this month compare to the same month last year?
+    - Can you tell me the total amount of credit sales for the quarter and the percentage it represents of our overall sales?
+    - What's the percentage of credit sales for each product line this month?
+    - How many credit sales were made during the busiest day of the month and what percentage did they represent of the total sales for that day?
+
+# Question 7
+- intent: sale_top_customer_action
+  examples: |
+    - Which customer has the highest sales volume this year?
+    - customer has the highest sales volume
+    - Who is our top customer in terms of sales volume for the year?
+    - Can you tell me which customer has made the most purchases this year?
+    - I'm interested in knowing which customer has generated the highest sales revenue for us this year. Could you provide that information?
+    - What's the name of the customer with the highest sales volume this quarter?
+    - Could you give me a list of our top customers ranked by sales volume for the year?
+    - Which customer has the highest percentage of our total sales for the year?
+    - How does the sales volume of our top customer this year compare to the same period last year?
+    - Can you tell me which product line the top customer this year is buying the most from?
+    - I'm curious about the geographic location of our top customer in terms of sales volume. Could you provide that information?
+    - Who are our top 5 customers in terms of sales volume this year?
+
+# Question 8
+- intent: sale_average_discount_rate_action
+  examples: |
+    - Which customer has the highest sales volume this year?
+    - What was the average discount rate offered to customers in the last quarter?
+    - average discount rate offered to customers in the last quarter
+    - Can you provide me with the average discount rate for each product line this year?
+    - I'm interested in knowing the average discount rate for our top 10 customers this year. Could you provide that information?
+    - How does the average discount rate offered this year compare to the previous year?
+    - Could you give me a breakdown of the average discount rate by sales channel for the year?
+    - What's the highest and lowest discount rates offered to customers this year?
+    - I'm curious about the average discount rate for each sales representative this year. Could you provide that information?
+    - What's the total amount of discounts given to customers this year and what percentage of our overall sales revenue does it represent?
+    - Could you provide me with a trend analysis of the average discount rate offered to customers over the last five years?
+    - What's the average discount rate offered during our busiest month this year?
+
+# Question 9
+- intent: sale_avg_gross_margin_action
+  examples: |
+    - What was the average gross margin for sales for each product line this quarter?
+    - average gross margin for sales for each product line this quarter
+    - Can you provide me with a breakdown of the gross margin by sales channel for this quarter?
+    - I'm interested in knowing the gross margin for our top 10 customers this quarter. Could you provide that information?
+    - How does the average gross margin this quarter compare to the same quarter last year?
+    - Could you give me a breakdown of the cost of goods sold for each product line this quarter?
+    - What's the highest and lowest gross margin for sales this quarter?
+    - I'm curious about the gross margin for each sales representative this quarter. Could you provide that information?
+    - What's the total amount of sales revenue generated this quarter and what percentage of it is gross profit?
+    - Could you provide me with a trend analysis of the average gross margin over the last five quarters?
+    - What's the average gross margin for sales during our busiest week this quarter?
+
+# Question 10
+- intent: sale_revenue_by_category_action
+  examples: |
+    - Which customer has the highest sales volume this year?
+    - customer has the highest sales volume year
+    - What was the total revenue generated by each product category last quarter?
+    - Could you provide me with a breakdown of the revenue generated by each product line for the year?
+    - I'm interested in knowing the revenue generated by our top 10 products this year. Could you provide that information?
+    - How does the total revenue generated by product category this year compare to the previous year?
+    - Could you give me a breakdown of the revenue by sales channel for each product category this year?
+    - What's the highest and lowest revenue generating product category this year?
+    - I'm curious about the geographic location of our highest revenue generating product category. Could you provide that information?
+    - What's the total amount of revenue generated by each product category and what percentage of our overall sales revenue do they represent?
+    - Could you provide me with a trend analysis of the revenue generated by each product category over the last five years?
+    - What's the total revenue generated by each product category during our busiest month this year?
+
+# Question 11
+- intent: sale_canceled_sales_order_action
+  examples: |
+    - What's the total number of canceled sales orders for the year?
+    - total number of canceled sales orders
+    - Can you provide me with a breakdown of the reasons for the canceled sales orders this month?
+    - I'm interested in knowing the customer segments that had the most canceled sales orders this month. Could you provide that information?
+    - How does the number of canceled sales orders this month compare to the same month last year?
+    - Could you give me a list of the sales representatives with the highest number of canceled sales orders this month?
+    - What's the total amount of revenue lost due to canceled sales orders this month?
+    - I'm curious about the average time it takes to cancel a sales order from the time it was placed. Could you provide that information?
+    - What's the trend of the number of canceled sales orders over the last five years?
+    - What's the percentage of canceled sales orders for each product line this month?
+    - What's the impact of the canceled sales orders on our sales forecast for the quarter?
+
+# =================================================//sales//==================================================
+
+
+# =================================================purchase==================================================
+# Question 1
+- intent: purchase_purchase_amount_quater
+  examples: |
+    - What is the total amount spent on purchases this quarter?
+    - total amount spent on purchases
+    - How much money have we spent on purchases so far this quarter?
+    - What is the total cost of our purchases for the current quarter?
+    - Can you tell me the amount spent on purchases this quarter?
+    - What is our total spending on purchases for this quarter?
+    - How much have we spent on purchases this quarter compared to last quarter?
+    - What is the total amount of purchases made in the current quarter?
+    - What is the sum of our purchases for this quarter?
+    - How much money did we spend on purchases in the last three months?
+    - What is our total purchase expenditure for the current quarter?
+
+# Question 2
+- intent: purchase_highest_quantity_supplier_this_year
+  examples: |
+    - Which supplier delivered the most goods this year?
+    - supplier delivered the most goods this year
+    - Can you tell me which supplier provided the highest quantity of goods in the current year?
+    - Who was the main supplier for us this year in terms of quantity?
+    - What supplier has provided the most goods this year?
+    - Which supplier supplied the highest number of items this year?
+    - What is the name of the supplier that has delivered the most goods this year?
+    - Who is the top supplier in terms of quantity this year?
+    - Which vendor supplied the most products to us this year?
+    - Can you give me a report on the supplier with the highest quantity of goods delivered this year?
+
+# Question 03 purchase
+- intent: purchase_average_lead_time_action
+  examples: |
+    - What is the average lead time for receiving goods after placing an order? 
+    - average lead time of goods?
+    - On average, how long does it take for us to receive goods after placing an order?
+    - What is the typical lead time for receiving goods after we place an order?
+    - How many days does it usually take for us to get our ordered goods?
+    - What is the average turnaround time for receiving goods after placing an order?
+    - Can you tell me how long it typically takes for us to receive goods once an order is placed?
+    - I'm curious about the average lead time for receiving goods. Can you provide that information?
+    - What's the typical wait time for goods to be delivered after placing an order?
+    - How long does it usually take for the ordered goods to arrive after we place an order?
+
+# Question 4
+- intent: highest_purchase_volume_product_this_year
+  examples: |
+    - What product had the highest purchase volume this year?
+    - product had the highest purchase volume this year
+    - Can you tell me which product had the highest number of purchases this year?
+    - Which product had the most sales volume this year?
+    - What item had the highest purchase volume in the current year?
+    - Which product had the largest number of purchases this year?
+    - What was our top-selling product in terms of purchase volume this year?
+    - Which product had the highest number of units purchased this year?
+    - Can you give me a report on the product with the highest purchase volume this year?
+    - What was the most popular product in terms of purchase volume this year?
+
+# Question 5
+- intent: credit_purchases_percentage_this_month
+  examples: |
+    - What percentage of purchases were made on credit this month?
+    - percentage of purchases were made on credit this month
+    - What is the percentage of purchases made on credit this month?
+    - Can you tell me how much of our purchases this month were made on credit?
+    - What percentage of our purchases this month were made using credit?
+    - How much of our monthly purchases were made on credit?
+    - What proportion of our purchases this month were made on credit?
+    - What percentage of our purchases this month were made on credit compared to last month?
+    - Can you give me a report on the percentage of credit purchases made this month?
+    - What is the ratio of credit purchases to total purchases this month?
+    - What is the fraction of purchases that were made on credit this month?
+
+# Question 6
+- intent: canceled_purchase_orders_this_quarter
+  examples: |
+    - How many purchase orders were canceled this quarter? 
+    - purchase orders were canceled quarter?
+    - Can you tell me the number of purchase orders that were cancel this quarter?
+    - How many purchase orders were canceled during the current quarter?
+    - What is the total count of canceled purchase orders this quarter?
+    - How many purchase orders were canceled this quarter compared to last quarter?
+    - What is the number of purchase orders that were canceled this quarter and the reason for cancellation?
+    - Can you give me a report on the canceled purchase orders for this quarter?
+    - What is the total number of purchase orders that were not fulfilled this quarter?
+    - What is the quantity of purchase orders that were canceled during the current quarter?
+
+# Question 7
+- intent: average_discount_rate_suppliers_this_year
+  examples: |
+    - What is the average discount rate negotiated with suppliers this year?
+    - average discount rate we negotiated suppliers this year?
+    - Can you tell me the average discount rate we received from suppliers this year?
+    - What was the average discount rate negotiated with suppliers in the current year?
+    - What is our average discount rate for the year with all our suppliers?
+    - What is the average rate of discounts we got from suppliers this year?
+    - What was the average discount rate we received from suppliers this year compared to last year?
+    - Can you give me a report on the average discount rate we negotiated with suppliers this year?
+    - What is the mean discount rate we negotiated with our suppliers this year?
+    - What is the average percentage discount rate we received from suppliers this year?
+
+# Question 8  
+- intent: highest_purchase_volume_department_this_quarter
+  examples: |
+    - department had the highest purchase volume this quarter?
+    - Can you tell me which department made the most purchases this quarter?
+    - What department had the most purchases in terms of volume this quarter?
+    - Which department had the largest purchase volume in the current quarter?
+    - What is the department with the highest number of purchases this quarter?
+    - What was the top purchasing department this quarter in terms of volume?
+    - Which department had the most spending this quarter?
+    - Can you give me a report on the department with the highest purchase volume this quarter?
+    - What is the departmental breakdown of purchases made this quarter, and which department had the highest volume?
+    - What was the department that spent the most money this quarter?
+
+# Question 9
+- intent: late_purchase_orders_received_this_year
+  examples: |
+    - purchase order received late this year
+    - How many purchase orders were received late this year?
+    - Can you tell me the number of purchase orders that arrived late this year?
+    - How many purchase orders were received past their expected delivery date this year?
+    - What is the total count of late purchase orders received this year?
+    - How many purchase orders were received late this year compared to last year?
+    - Can you give me a report on the number of late purchase orders received this year?
+    - What is the total number of late purchase orders we received from all suppliers this year?
+    - What is the quantity of purchase orders that arrived late this year?
+    - How many purchase orders were delayed this year, and what was the total cost of these orders?
+
+# Question 10
+- intent: highest_average_delivery_time_supplier_this_year
+  examples: |
+    - Which supplier has the highest average delivery time this year
+    - supplier had the highest average delivery time this year
+    - Can you tell me which supplier took the longest to deliver their goods this year
+    - What supplier had the longest average delivery time in the current year
+    - Which supplier had the slowest delivery times this year on average
+    - What is the average delivery time for our suppliers this year, and which supplier had the longest time?
+    - Which supplier had the longest lead time for deliveries this year
+    - Can you give me a report on the supplier with the highest average delivery time this year?
+    - What supplier had the highest average shipping time this year
+    - What is the average delivery time for each supplier this year, and which one had the highest average?
+    - Which supplier had the highest percentage of late deliveries this year, and what was their average delivery time?
+
+# =================================================//purchase//===================================================
+
+# =================================================Inventory==================================================
+
+# Question 1
+
+- intent: inventory_current_inventory_products
+  examples: |
+    - What is the current inventory value of our products? 
+    - What is the total value of our current inventory?
+    - Can you tell me how many products we have in stock?
+    - How much inventory do we currently have?
+    - What is the current value of our product inventory 
+    - Could you give me an update on our current inventory levels?
+    - Can you provide a breakdown of our current inventory by product type 
+    - What is the total cost of the products we currently have in inventory?
+    - How many units of each product do we have in stock right now?
+    - Could you tell me the current status of our inventory levels?
+
+# Question 2
+
+- intent: inventory_highest_demand_product_this_month
+  examples: |
+    - Which product has the highest demand this month? 
+    - product has the highest demand this month
+    - What product has been selling the most this month?
+    - Which item has had the highest demand in the current month?
+    - Can you tell me which product is in highest demand right now?
+    - What is the most popular product this month?
+    - Which item has seen the most sales in the current month?
+    - Could you give me an update on which product is selling the most this month?
+    - Which product has seen the highest demand among customers this month?
+    - Can you provide a report on the product with the highest sales in the current month?
+    - What is our best-selling product this month?
+
+# Question 3
+
+- intent: inventory_average_delivery_time_this_quarter
+  examples: |
+    - What is the average time taken to deliver products to customers this quarter?
+    - What is the average delivery time for our products this quarter?
+    - average delivery time for our products this quarter
+    - Can you give me an update on how long it takes us to deliver products to customers this quarter?
+    - What is the average time it takes for our customers to receive their products this quarter?
+    - How long does it usually take us to deliver products to customers this quarter?
+    - Could you provide me with the average delivery time for our products for this quarter?
+    - Can you tell me the average lead time for product delivery to customers in the current quarter?
+    - What is the average shipping time for products delivered this quarter?
+    - Can you provide a report on the average delivery time for our products this quarter?
+    - What is the average delivery time for orders fulfilled in the current quarter?
+
+# Question 4
+
+- intent: inventory_turnover_ratio_highest_selling_product_this_year
+  examples: |
+    - What is the inventory turnover ratio for our highest selling product this year? 
+    - the inventory turnover ratio for our highest selling product this year?
+    - Can you give me an update on the inventory turnover ratio for our top-selling product this year?
+    - What is the rate of inventory turnover for our most popular product this year?
+    - How frequently is our highest selling product turning over in inventory this year?
+    - Could you provide me with the inventory turnover ratio for our best-selling product this year?
+    - Can you tell me the inventory turnover ratio for our most in-demand product this year?
+    - What is the inventory turnover rate for the product that has sold the most units this year?
+    - Can you provide a report on the inventory turnover ratio for our highest selling product this year?
+    - What is the rate at which we are selling and restocking our top-selling product this year?
+
+# Question 5
+
+- intent: inventory_average_lead_time_for_receiving_goods_from_suppliers_this_quarter
+  examples: |
+    - What is the average lead time for receiving goods from suppliers this quarter?
+    - average lead time for receiving goods from suppliers this quarter?
+    - Can you give me an update on the average time it takes to receive goods from our suppliers this quarter?
+    - What is the average waiting time to receive goods from our suppliers this quarter?
+    - How long does it usually take for us to receive goods from our suppliers this quarter?
+    - Could you provide me with the average lead time for receiving goods from suppliers this quarter?
+    - Can you tell me the average waiting period for receiving goods from our suppliers in the current quarter?
+    - What is the average delivery time for goods received from our suppliers this quarter?
+    - Can you provide a report on the average lead time for receiving goods from our suppliers this quarter?
+    - What is the average time it takes from placing an order with a supplier to receiving the goods this quarter?
+
+# Question 6
+
+- intent: inventory_number_of_units_currently_in_transit
+  examples: |
+    - How many units of our products are currently in transit?
+    - units of our products are currently in transit
+    - Can you give me an update on the number of products that are currently in transit?
+    - What is the current quantity of products that are in transit?
+    - How many of our products are currently on their way to customers?
+    - Could you provide me with the number of products currently in transit?
+    - Can you tell me how many units of our products are currently en route to customers?
+    - What is the current status of products in transit?
+    - Can you provide a report on the number of units of our products currently in transit?
+    - How many of our products have been shipped but not yet received by customers?
+
+# Question 7
+
+- intent: inventory_product_highest_return_rate_this_year
+  examples: |
+    - Which product has the highest return rate this year?
+    - product has the highest return rate this year
+    - Can you give me an update on which product has the highest rate of returns this year?
+    - What is the product with the highest return rate so far this year?
+    - Which of our products has been returned the most this year?
+    - Could you provide me with the product that has the highest return rate this year?
+    - Can you tell me which product has the highest rate of customer returns this year?
+    - What is the product that has been most commonly returned by customers this year?
+    - Can you provide a report on the product with the highest return rate this year?
+    - Which product has the most dissatisfied customers leading to high returns this year?
+
+# Question 8
+
+- intent: inventory_average_time_to_fulfill_customer_orders_this_month
+  examples: |
+    - What is the average time it takes us to fulfill customer orders this month?
+    - average time it takes us to fulfill customer orders this month
+    - Can you give me an update on the average time it takes us to process and ship customer orders this month?
+    - What is the average waiting time for customers to receive their orders this month?
+    - How long does it usually take us to fulfill and ship customer orders in the current month?
+    - Could you provide me with the average time it takes us to fulfill customer orders this month?
+    - Can you tell me the average lead time for order fulfillment in the current month?
+    - What is the average processing and shipping time for customer orders this month?
+    - Can you provide a report on the average time taken to fulfill customer orders this month?
+    - What is the average time between receiving a customer order and shipping it out this month?
+
+# Question 9
+
+- intent: inventory_location_highest_inventory_holding_cost_this_quarter
+  examples: |
+    - Which location has the highest inventory holding cost this quarter?
+    - location has the highest inventory holding cost this quarter
+    - Can you give me an update on which location has incurred the highest inventory holding cost this quarter?
+    - What is the location with the highest inventory holding cost so far this quarter?
+    - Which of our locations has the highest inventory carrying cost this quarter?
+    - Could you provide me with the location that has the highest inventory holding cost this quarter?
+    - Can you tell me which location has the highest inventory holding cost based on current data this quarter?
+    - What is the location that has the most expensive inventory holding cost this quarter?
+    - Can you provide a report on the location with the highest inventory holding cost this quarter?
+    - Which location is facing higher inventory holding cost leading to higher expenses this quarter?
+
+# Question 10
+
+- intent: inventory_current_inventory_level_top_10_selling_products
+  examples: |
+    - What is the current inventory level of our top 10 selling products?
+    - current inventory level of our selling products
+    - Can you give me an update on the inventory level of our top 10 selling products?
+    - What is the current stock quantity for our 10 best-selling products?
+    - How many units of each of our top 10 selling products do we currently have in stock?
+    - Could you provide me with the current inventory level of our most popular products?
+    - Can you tell me the current stock status of our top 10 selling products?
+    - What is the current quantity of each of our top 10 selling products in inventory?
+    - Can you provide a report on the inventory level of our top 10 selling products?
+    - What is the current stock level of our most in-demand products?
+
+# =================================================//Inventory//==================================================
+
+# =================================================Account + invoice ==================================================
+
+# Question 1
+- intent: ai_total_revenue_this_month
+  examples: |
+    - What is the total revenue for this month?
+    - total revenue for this month
+    - Can you give me an update on the total revenue generated this month?
+    - What is the revenue earned so far this month?
+    - How much revenue have we generated in the current month?
+    - Could you provide me with the total sales figures for this month?
+    - Can you tell me the total amount of money earned this month?
+    - What is the total revenue for this month?
+    - Can you provide a report on the total revenue earned this month?
+    - How much money did we make in sales this month?
+
+# Question 2
+
+- intent: ai_customer_highest_outstanding_balance_this_year
+  examples: |
+    - Which customer has the highest outstanding balance this year?
+    - the highest outstanding balance this year
+    - Can you give me an update on which customer has the largest unpaid balance this year?
+    - What is the customer with the highest outstanding balance so far this year?
+    - Which of our customers has the highest unpaid balance this year?
+    - Could you provide me with the customer that has the highest outstanding balance this year?
+    - Can you tell me which customer owes us the most money this year?
+    - What is the customer that has the largest outstanding balance this year?
+    - Can you provide a report on the customer with the highest outstanding balance this year?
+    - Which customer is currently facing high outstanding balance and leading to delayed payments this year?
+
+# Question 3
+
+- intent: ai_average_collection_time_invoices_this_quarter
+  examples: |
+    - What is the average collection time for invoices this quarter?
+    - average collection time for invoices this quarter
+    - Can you give me an update on the average time it takes to collect payments for invoices this quarter?
+    - What is the average time it takes for us to receive payments for invoices this quarter?
+    - How long does it typically take us to collect payments for invoices this quarter?
+    - Could you provide me with the average number of days it takes to collect invoice payments this quarter?
+    - Can you tell me the average collection period for invoices in the current quarter?
+    - What is the average time it takes for customers to pay their invoices this quarter?
+    - Can you provide a report on the average collection time for invoices this quarter?
+    - What is the average payment turnaround time for invoices issued this quarter?
+
+# Question 4
+- intent: ai_product_category_highest_sales_volume_this_year
+  examples: |
+    - Which product category has the highest sales volume this year?
+    - Can you give me an update on which product category has the largest sales volume this year?
+    - What is the product category with the highest sales volume so far this year?
+    - Which of our product categories has the highest sales figures this year?
+    - Could you provide me with the product category that has the highest sales volume this year?
+    - Can you tell me which product category has sold the most units this year?
+    - What is the product category that has the largest sales volume this year?
+    - Can you provide a report on the product category with the highest sales volume this year?
+    - Which product category is currently generating the most revenue this year?
+
+# Question 5
+- intent: ai_number_of_invoices_issued_this_quarter
+  examples: |
+    - How many invoices were issued this quarter?
+    - Can you give me an update on the number of invoices issued this quarter?
+    - What is the total number of invoices that have been issued this quarter?
+    - How many invoices have been generated in the current quarter?
+    - Could you provide me with the number of invoices that have been issued this quarter?
+    - Can you tell me the total count of invoices generated in the current quarter?
+    - What is the total number of invoices that have been created this quarter?
+    - Can you provide a report on the number of invoices issued this quarter?
+    - How many invoices have been sent to customers in the current quarter?
+
+# Question 6
+- intent: ai_average_invoice_amount_per_customer_this_year
+  examples: |
+    - What is the average invoice amount per customer this year?
+    - give me an update on the average amount per invoice per customer this year
+    - Can you give me an update on the average amount per invoice per customer this year?
+    - What is the average amount per invoice that we have charged to customers this year?
+    - How much is the average invoice amount per customer this year?
+    - Could you provide me with the average invoice amount per customer this year?
+    - Can you tell me the average amount of money that each customer has been invoiced this year?
+    - What is the average invoice value per customer this year?
+    - Can you provide a report on the average invoice amount per customer this year?
+    - What is the average amount billed per customer for the year to date?
+
+# Question 7
+- intent: ai_number_of_overdue_invoices_currently
+  examples: |
+    - How many overdue invoices are there currently?
+    - Can you give me an update on the number of invoices that are past their due date?
+    - What is the total count of invoices that are currently past due?
+    - give me an update on the number of invoices that are past their due date
+    - How many invoices are currently overdue?
+    - Could you provide me with the number of invoices that have not been paid by their due date?
+    - Can you tell me the total number of invoices that are overdue?
+    - What is the current number of invoices that are past their due date?
+    - Can you provide a report on the number of overdue invoices currently
+
+# Question 8
+- intent: ai_salesperson_highest_revenue_this_year
+  examples: |
+    - Which salesperson has generated the highest revenue this year?
+    - Can you give me an update on which salesperson has the largest sales figures this year?
+    - What is the salesperson with the highest revenue generated so far this year?
+    - Which of our salespeople has the highest sales figures this year?
+    - Could you provide me with the salesperson who has generated the highest revenue this year?
+    - Can you tell me which salesperson has generated the most revenue this year?
+    - What is the salesperson that has the largest revenue figures this year?
+    - Can you provide a report on the salesperson with the highest revenue this year?
+    - Which salesperson is currently responsible for the most revenue this year?
+
+# Question 9
+- intent: ai_average_discount_rate_offered_to_customers_this_quarter
+  examples: |
+    - What is the average discount rate offered to customers this quarter?
+    - average discount rate offered to customers
+    - Can you give me an update on the average discount rate offered to customers this quarter?
+    - What is the average percentage discount we are offering to customers this quarter?
+    - How much is the average discount rate we are offering to customers this quarter?
+    - Could you provide me with the average discount rate that we have offered to customers this quarter?
+    - Can you tell me the average percentage discount that we are giving to customers this quarter?
+    - What is the average discount being given to customers this quarter?
+    - Can you provide a report on the average discount rate offered to customers this quarter?
+    - What is the average rate of discount offered to customers for the current quarter?
+
+# Question 10
+- intent: ai_most_common_payment_method_used_by_customers_this_year
+  examples: |
+    - Which payment method is most commonly used by customers this [year](time_period)?
+    - Can you give me an update on the most commonly used payment method by customers this [quarter](time_period)?
+    - What is the most popular payment method used by customers this [month](time_period)?
+    - How do customers mostly pay for their purchases this [week](time_period)?
+    -  provide me with the payment method that has been most commonly used by customers this [year](time_period)
+    - Could you provide me with the payment method that has been most commonly used by customers this [year](time_period)?
+    - Can you tell me which payment method has the highest usage by customers this [quarter](time_period)?
+    - What is the payment method that is used the most by customers this [month](time_period)?
+    - Can you provide a report on the most commonly used payment method by customers this [year](time_period)?
+    - What is the most frequently used payment method by customers for the [year to date](time_period)?
+
+# Question 11
+- intent: ai_inventory_current_balance_profit_and_loss
+  examples: |
+    - Can you provide me with the latest balance sheet and profit and loss statement for my company?
+    - What is the current balance of my assets and liabilities for the current year?
+    - latest balance sheet and profit and loss statement
+    - How much profit or loss has my company generated in the current year, according to the latest financial statements?
+    - Can you give me a breakdown of the revenue and expenses for the current year, as shown on the profit and loss statement?
+    - I need to review the current year financial statements for my company. Can you help me access them?
+    - Could you explain the difference between the balance sheet and the profit and loss statement for the current year?
+    - What are the main factors contributing to the current year's profit or loss, according to the latest financial statements?
+    - I'm trying to get a sense of my company's financial health. Can you provide me with the current year financial statements?
+
+
+# =================================================//Account + invoice //==================================================
+
+# Question 1 | done
+- intent: quotation_count
+  examples: |
+    - How many Quotations are there?
+    - How many Open Quotations are there?
+    - How many Open Quotations ?
+    - can you give me Open Quotations?
+    - no of quotations
+    - count of Quotations
+    - number of quotations
+    - What is the total number of Quotations?
+    - How many quotes are in the database?
+    - Can you tell me the count of Quotations?
+    - Count the number of Quotations, please.
+    - I need to know the exact number of Quotations.
+    - Give me the Quotation count, please.
+    - What is the total count of Quotations?
+    - How many Quotations are currently available?
+    - Please provide the number of Quotations.
+
+#ouestion2 
+- intent: value_quotation
+  examples: |
+    - What is the total value of quotation?
+    - value of quotation?
+    - value of quotations?
+    - How much does the quotation amount to?
+    - Can you tell me the value of the quotation?
+    - What is the total amount for the quotation?
+    - I'm interested in knowing the value of the quote.
+    - Could you give me the price for the quotation?
+    - What is the cost of the quotation?
+    - How much will it cost for the quotation?
+    - I would like to know the value of the quotation please.
+
+#ouestion3
+- intent: last_quotation
+  examples: |
+    - What is last quotation?
+    - last quotation?
+    - What is the last quotation?
+    - Can you give me the last quotation?
+    - What was the last price?
+    - What is the latest quote?
+    - What is the current stock price?
+    - What is the latest market value?
+
+#ouestion 4
+- intent: quotation_status
+  examples: |
+    - What is the status of quotation [Q00001 - R1](quotation_number)?
+    - status of quotation [Q00001](quotation_number)
+    - Can you give me the status of [Q00002](quotation_number)?
+    - Quotation [Q00003 - R2](quotation_number) status?
+    - Status of [Q00004](quotation_number) quotation?
+    - What is the status of my quotation [Q00005](quotation_number)?
+    - Please provide me with the status of [Q00006 - R2](quotation_number).
+    - Can you tell me if [Q00007](quotation_number) has been approved yet?
+    - I need to know the status of my quotation [Q00008](quotation_number) as soon as possible.
+    - Quotation [Q00009](quotation_number) was submitted a week ago, what is its status now?
+    - Is there any update on the status of [Q00010 - R1](quotation_number)?
+    - Could you let me know the current status of [Q00011](quotation_number) please?
+    - I'm checking on the status of [Q00012](quotation_number), can you give me an update?
+    - What is the status of [Q00013 - R3](quotation_number) and when can I expect a response?
+    - Has there been any progress on the status of my quotation [Q00014](quotation_number)?
+
+#ouestion 5
+- intent: purchase_status
+  examples: |
+    - What is the status of purchase [RPPO0001 - R1](purchase_id)?
+    - status of purchase [RPPO0002](purchase_id)
+    - Can you give me the status of [RPPO0003](purchase_id) purchase?
+    - Purchase [RPPO0004 - R2](purchase_id) status?
+    - Status of [RPPO0005](purchase_id) purchase?
+    - What is the status of my purchase [RPPO0006](purchase_id)?
+    - Please provide me with the status of [RPPO0007 - R2](purchase_id) purchase.
+    - Can you tell me if [RPPO0008](purchase_id) purchase has been approved yet?
+    - I need to know the status of my purchase [RPPO0009](purchase_id) as soon as possible.
+    - Purchase [RPPO0010](purchase_id) was submitted a week ago, what is its status now?
+    - Is there any update on the status of [RPPO0011 - R1](purchase_id) purchase?
+    - Could you let me know the current status of [RPPO0012](purchase_id) purchase please?
+    - I'm checking on the status of [RPPO0013](purchase_id) purchase, can you give me an update?
+    - What is the status of [RPPO0014 - R3](purchase_id) purchase and when can I expect a response?
+    - Has there been any progress on the status of my purchase [RPPO0015](purchase_id)?
+
+#ouestion 6
+- intent: value_sale
+  examples: |
+    - What is current value of sales order
+    - How much revenue did we generate this quarter?
+    - What was the total sales amount?
+    - current value of sales order?
+    - What is the current value of our sales pipeline?
+    - How much revenue have we generated so far this year?
+    - What is the total sales value for our top product?
+    - Can you give me an update on our sales performance?
+    - What was the total sales amount for our latest product launch?
+    - How much revenue did we generate from our online store last week?
+    - What is the current value of our outstanding sales orders?
+
+#ouestion 7
+- intent: list_quatation
+  examples: |
+    - What is list of quotation
+    - can you give me a list
+    - quotation list
+    - how many quatations are there 
+    - hey list quotations
+
+#ouestion 8
+- intent: inventry_product
+  examples: |
+    - What is inventry of product [COLLECTING](pname)?
+    - Can you give me inventry of product [SUPPORT PLATE FOR PUSHING  BLOCK](pname)?
+    - what is [U PROFILE](pname) inventry ? 
+    - hey give me [1 SUPPORT OF PU VALVE](pname) inventry
+    - What's the current inventory for [LAPP CODE-38007034_2 CORE COLOR CODE COLOR-RED & BLACK size-0.5 Sq m.m](pname)?
+    - Can you tell me how many [07-01 END COVER](pname) are in stock?
+    - I need to know the inventory level for [1-11-6 LTR SIDE WALL RH](pname), can you check?
+    - Is [TRANSFER CONVEYOR](pname) currently in stock?
+    - How many units of [1.5 PUMP SUCTION PIPE](pname) do you have available?
+    - Please provide the inventory status for [SKU P5678](pname).
+    - I'm interested in [PUMP SUCTION PIPE](pname), what's the current inventory?
+    - What's the inventory count for [EXT PIPE](pname) right now?
+    - Can you give me an update on the inventory of [1-7-4 RH-GLH-2650L TRANSFER CONVEYOR LH SIDE WALL](pname)?
+    - What is inventry of product [INFEED & DISCHARGE TOP PROFILE  CHANNEL](pname)?
+    - Can you give me inventry of product [L CHANNEL FOR JOINING PLATFORM RAILING](pname)?
+    - what is [(1/2")SMALL  SUPPORT OF PU VALVE](pname) inventry ? 
+    - hey give me [VIPA-MOVICON-ECO+-7 INCH](pname) inventry
+    - What's the current inventory for [1 SYSTEM PLAST SINGLE RAIL CLAMP 13014](pname)?
+    - Can you tell me how many [07-01 END COVER](pname) are in stock?
+    - I need to know the inventory level for [1-2-1 GRH-LH-1250L TRANSFER CONVEYOR RH SIDE WALL](pname), can you check?
+    - Is [1.5 " TC](pname) currently in stock?
+    - How many units of [1.5"-FLANGE-ANSI 150# (OD-152, ID-39 , PCD-121) - S.S.-304](pname) do you have available?
+    - Please provide the inventory status for [INFEED & DISCHARGE](pname).
+    - I'm interested in [INT. MODULE-1 COLLECTING TRAY  ASSY.](pname), what's the current inventory?
+    - What's the inventory count for [TWISTER BLOCK FOR 250ML RINSER](pname) right now?
+    - Can you give me an update on the inventory of [SUPPORT CHANNEL](pname)?
+
+#ouestion 9
+- intent: sjo_list
+  examples: |
+    - Which sjo is in progress?
+    - can you give me Sale Job Order in-progress list?
+    - how many sale job order are fall in-progress?
+    - an you list out the sjo who are status is inprogress
+    - inprogress sjo list
+    - What is the status of all Sale Job Orders?
+    - Can you give me the list of Sale Job Orders that are completed?
+    - How many Sale Job Orders are currently in progress?
+    - Can you provide me with the list of Sale Job Orders that are awaiting approval?
+    - List out all the Sale Job Orders that are on hold.
+    - How many Sale Job Orders are scheduled for next week?
+    - Which Sale Job Orders have been delayed?
+    - Can you give me the list of all Sale Job Orders that are pending?
+
+
+
+- synonym: list
+  examples: |
+    - catalog
+    - roster
+    - table
+    - menu
+    - checklist
+
+- synonym: leads
+  examples: |
+    - targets
+    - referrals
+    - business leads
+    - qualified leads
+    - prospects
+    - potential customers
+    - sales leads
+    - contacts
+    - inquiries
+
+- synonym: followed up
+  examples: |
+    - pursued
+    - chased
+    - checked in
+    - contacted again
+    - followed through
+    - stayed in touch
+    - persisted
+    - pursued further
+    - continued the conversation
+    - maintained contact
+
+- synonym: summary
+  examples: |
+    - pursued
+    - synopsis
+    - abstract
+    - overview
+    - recap
+    - digest
+    - briefing
+    - essence
+    - outline
+    - précis
+    - review
+
+- synonym: report
+  examples: |
+    - document
+    - dossier
+    - account
+    - analysis
+    - findings
+    - statement
+    - dispatch
+    - bulletin
+    - record
+    - write-up
+
+- synonym: opportunity
+  examples: |
+    - chance
+    - opening
+    - possibility
+    - prospect
+    - potential
+    - occasion
+    - option
+    - window
+    - avenue
+    - way
+
+- synonym: deals
+  examples: |
+    - transactions
+    - agreements
+    - contracts
+    - bargains
+    - sales
+    - trades
+    - negotiations
+    - pacts
+    - arrangements
+    - settlements
+
+- synonym: last
+  examples: |
+    - latest
+    - recent
+    - previous
+    - preceding
+    - endmost
+    - terminal
+    - ultimate
+
+- synonym: value
+  examples: |
+    - worth
+    - importance
+    - significance
+    - merit
+    - usefulness
+    - utility
+    - benefit
+    - advantage
+    - quality
+    - price
+
+- synonym: orders
+  examples: |
+    - requests
+    - commands
+    - directives
+    - instructions
+    - mandates
+    - demands
+    - requisitions
+    - assignments
+    - directives
+    - edicts
+
+- synonym: customers
+  examples: |
+    - clients
+    - patrons
+    - buyers
+    - consumers
+    - users
+    - shoppers
+    - purchasers
+    - account holders
+    - regulars
+    - guests
+
+- synonym: contacted
+  examples: |
+    - reached out to
+    - got in touch with
+    - communicated with
+    - approached
+    - contacted
+    - connected with
+    - made contact with
+    - talked to
+    - spoke to
+    - engaged with
+
+- synonym: revenue
+  examples: |
+    - income
+    - earnings
+    - proceeds
+    - receipts
+    - turnover
+    - yield
+    - returns
+    - sales
+    - profits
+    - takings
+
+- synonym: current
+  examples: |
+    - present
+    - existing
+    - prevailing
+    - contemporary
+    - up-to-date
+    - modern
+    - recent
+    - now
+    - present-day
+    - latest
+
+- synonym: average
+  examples: |
+    - mean
+    - median
+    - norm
+    - usual
+    - standard
+    - typical
+    - ordinary
+    - regular
+    - customary
+    - common
+
+- synonym: highest
+  examples: |
+    - topmost
+    - maximum
+    - supreme
+    - paramount
+    - ultimate
+    - highest-ranking
+    - uppermost
+    - foremost
+    - leading
+    - peak
+
+- synonym: selling
+  examples: |
+    - marketing
+    - sales
+    - promotion
+    - advertising
+    - merchandising
+    - retailing
+    - vending
+    - trading
+    - peddling
+    - pushing
+
+- synonym: generated
+  examples: |
+    - produced
+    - created
+    - generated
+    - originated
+    - caused
+    - resulted in
+    - led to
+    - engendered
+    - triggered
+    - brought about
+
+- synonym: quarter
+  examples: |
+    - one-fourth
+    - three months
+    - trimester
+    - period
+    - interval
+    - segment
+    - division
+    - portion
+    - section
+
+- synonym: volume
+  examples: |
+    - quantity
+    - amount
+    - size
+    - capacity
+    - magnitude
+    - bulk
+    - mass
+    - extent
+    - measurement
+    - dimension
+
+- synonym: delivery
+  examples: |
+    - shipment
+    - distribution
+    - transport
+    - dispatch
+    - conveyance
+    - consignment
+    - handing over
+    - transmittal
+    - supply
+
+- synonym: fulfilling
+  examples: |
+    - satisfying
+    - gratifying
+    - rewarding
+    - fulfilling
+    - enriching
+    - meaningful
+    - enjoyable
+    - pleasing
+    - adequate
+    - sufficient
+
+- synonym: sales
+  examples: |
+    - revenue
+    - turnover
+    - transactions
+    - deals
+    - income
+    - business
+    - commerce
+    - trade
+    - retail
+    - merchandising
+
+- synonym: credit
+  examples: |
+    - recognition
+    - acknowledgment
+    - praise
+    - tribute
+    - acclaim
+    - commendation
+    - appreciation
+    - trust
+    - belief
+    - confidence
+
+- synonym: discount
+  examples: |
+    - deduction
+    - reduction
+    - markdown
+    - rebate
+    - allowance
+    - cut
+    - savings
+    - concession
+    - special offer
+    - sale
+
+- synonym: offered
+  examples: |
+    - provided
+    - presented
+    - proposed
+    - extended
+    - given
+    - suggested
+    - recommended
+    - furnished
+    - supplied
+    - tendered
+
+- synonym: margin
+  examples: |
+    - edge
+    - boundary
+    - brink
+    - border
+    - periphery
+    - rim
+    - verge
+    - lip
+    - margin
+    - fringe
+
+- synonym: canceled
+  examples: |
+    - called off
+    - scrapped
+    - abandoned
+    - discontinued
+    - terminated
+    - called back
+    - revoked
+    - nullified
+    - annulled
+    - voided
+
+- synonym: amount
+  examples: |
+    - quantity
+    - total
+    - sum
+    - extent
+    - measurement
+    - number
+    - level
+    - magnitude
+    - degree
+
+- synonym: spent
+  examples: |
+    - used up
+    - consumed
+    - exhausted
+    - depleted
+    - utilized
+    - invested
+    - disbursed
+    - paid out
+    - wasted
+    - squandered
+
+- synonym: purchases
+  examples: |
+    - buys
+    - acquisitions
+    - procurements
+    - shopping
+    - transactions
+    - investments
+    - shopping spree
+    - goods
+    - wares
+    - merchandise
+
+- synonym: goods
+  examples: |
+    - merchandise
+    - products
+    - commodities
+    - articles
+    - wares
+    - possessions
+    - assets
+    - materials
+    - belongings
+    - chattels
+
+- synonym: negotiated
+  examples: |
+    - discussed
+    - arranged
+    - bargained
+    - mediated
+    - settled
+    - brokered
+    - compromised
+    - coordinated
+    - resolved
+    - ironed out
+
+- synonym: suppliers
+  examples: |
+    - providers
+    - sources
+    - distributors
+    - vendors
+    - purveyors
+    - merchants
+    - dealers
+    - sellers
+    - contractors
+    - manufacturers
+
+- synonym: department
+  examples: |
+    - division
+    - branch
+    - section
+    - unit
+    - bureau
+    - office
+    - agency
+    - team
+    - sector
+    - wing
+
+- synonym: received
+  examples: |
+    - obtained
+    - acquired
+    - collected
+    - gained
+    - procured
+    - taken
+    - accepted
+    - welcomed
+    - acknowledged
+    - received well
+
+- synonym: demand
+  examples: |
+    - requirement
+    - need
+    - necessity
+    - request
+    - order
+    - call
+    - appeal
+    - claim
+    - ultimatum
+    - insistence
+
+- synonym: transit
+  examples: |
+    - transportation
+    - carriage
+    - passage
+    - movement
+    - transfer
+    - delivery
+    - freight
+    - haulage
+
+- synonym: location
+  examples: |
+    - place
+    - site
+    - position
+    - spot
+    - area
+    - region
+    - zone
+    - locale
+    - address
+    - whereabouts
+
+- synonym: outstanding
+  examples: |
+    - excellent
+    - remarkable
+    - exceptional
+    - notable
+    - extraordinary
+    - prominent
+    - impressive
+    - outstanding
+    - unparalleled
+    - incomparable
+
+- synonym: issued
+  examples: |
+    - released
+    - published
+    - distributed
+    - printed
+    - circulated
+    - launched
+    - broadcasted
+    - issued forth
+    - dispensed
+    - emitted
+
+- synonym: amount
+  examples: |
+    - quantity
+    - total
+    - sum
+    - volume
+    - extent
+    - measurement
+    - number
+    - level
+    - magnitude
+    - degree
+
+- synonym: currently
+  examples: |
+    - presently
+    - at the moment
+    - at present
+    - these days
+    - currently speaking
+    - today
+    - just now
+    - currently
+    - in the present
+
+- synonym: discount rate
+  examples: |
+    - interest rate
+    - borrowing rate
+    - lending rate
+    - cost of capital
+    - rate of return
+    - investment rate
+    - discount factor
+    - finance charge
+    - annual percentage rate (APR)
+
+- synonym: most commonly
+  examples: |
+    - frequently
+    - often
+    - typically
+    - usually
+    - commonly
+    - generally
+    - ordinarily
+    - regularly
+    - routinely
+
+
+
+
+
+
+
+
+
+

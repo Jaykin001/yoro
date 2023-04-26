@@ -1,0 +1,501 @@
+version: "3.1"
+
+rules:
+
+- rule: Say WELCOME anytime the user says hi,hello,start
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+# =================================================CRM==================================================
+
+# Question 1
+- rule: Say crm list leads anytime the user action crm list leads
+  steps:
+  - intent: crm_list_leads
+  - action: action_crm_list_leads
+  
+# Question 2
+- rule: Say unfollowed leads anytime the user action crm unfollowed leads
+  steps:
+  - intent: crm_unfollowed_leads
+  - action: action_crm_unfollowed_leads
+
+# Question 3
+- rule: Say crm sales opportunities summary anytime the user action crm sales opportunities summary
+  steps:
+  - intent: crm_sales_opportunities_summary
+  - action: action_crm_sales_opportunities_summary
+
+# Question 4
+- rule: Say crm_opportunity_status anytime the user action_crm_opportunity_status
+  steps:
+  - intent: crm_opportunity_status
+  - action: action_crm_opportunity_status
+
+# Question 5
+- rule: Say crm_deals_report anytime the user action_crm_deals_report
+  steps:
+  - intent: crm_deals_report
+  - action: action_crm_deals_report
+
+# Question 6
+- rule: Say crm_count_entries_action anytime the user action_crm_count_entries_action
+  steps:
+  - intent: crm_count_entries_action
+  - action: action_crm_count_entries_action
+
+# Question 7
+- rule: Say crm_uncontacted_customers_last_month anytime the user action_crm_uncontacted_customers_last_month
+  steps:
+  - intent: crm_uncontacted_customers_last_month
+  - action: action_crm_uncontacted_customers_last_month
+
+# Question 8
+- rule: Say crm_top_customers_by_revenue_current_year anytime the user action_crm_top_customers_by_revenue_current_year
+  steps:
+  - intent: crm_top_customers_by_revenue_current_year
+  - action: action_crm_top_customers_by_revenue_current_year
+
+# Question 9
+- rule: Say crm_average_time_salesteam anytime the user action_crm_average_time_salesteam
+  steps:
+  - intent: crm_average_time_salesteam
+  - action: action_crm_average_time_salesteam
+
+# Question 10
+- rule: Say action_crm_salesperson_highest_win_rate anytime the user crm_salesperson_highest_win_rate
+  steps:
+  - intent: crm_salesperson_highest_win_rate
+  - action: action_crm_salesperson_highest_win_rate
+
+# Question 11
+- rule: Say action_crm_salesperson_number_sales_done anytime the user crm_salesperson_number_sales_done
+  steps:
+  - intent: crm_salesperson_number_sales_done
+  - action: action_crm_salesperson_number_sales_done
+
+# Question 12
+- rule: Say action_crm_products_selling_most anytime the user crm_products_selling_most
+  steps:
+  - intent: crm_products_selling_most
+  - action: action_crm_products_selling_most
+
+# Question 13
+- rule: Say action_crm_revenue_quarter_this_year anytime the user crm_revenue_quarter_this_year
+  steps:
+  - intent: crm_revenue_quarter_this_year
+  - action: action_crm_revenue_quarter_this_year
+  
+# =================================================//CRM//==================================================
+
+
+# =================================================sales==================================================
+
+# Question 1
+- rule: Say sale_total_revenue_quarter anytime the user action_sale_total_revenue_quarter
+  steps:
+  - intent: sale_total_revenue_quarter
+  - action: action_sale_total_revenue_quarter
+
+# Question 2
+- rule: Say sale_highest_sales_volume_year anytime the user action_sale_highest_sales_volume_year
+  steps:
+  - intent: sale_highest_sales_volume_year
+  - action: action_sale_highest_sales_volume_year
+  
+# Question 3
+- rule: Say sale_average_delivery_time anytime the user action_sale_average_delivery_time
+  steps:
+  - intent: sale_average_delivery_time
+  - action: action_sale_average_delivery_time
+  
+# Question 4
+- rule: Say sale_number_orders_month anytime the user action_sale_number_orders_month
+  steps:
+  - intent: sale_number_orders_month
+  - action: action_sale_number_orders_month
+ 
+ # Question 5
+- rule: Say sale_revenue_by_salesperson anytime the user action_sale_revenue_by_salesperson
+  steps:
+  - intent: sale_revenue_by_salesperson
+  - action: action_sale_revenue_by_salesperson
+
+ # Question 6
+- rule: Say sale_count_credit_sales anytime the user action_sale_count_credit_sales
+  steps:
+  - intent: sale_count_credit_sales
+  - action: action_sale_count_credit_sales
+ 
+ # Question 7
+- rule: Say sale_top_customer_action anytime the user action_sale_top_customer
+  steps:
+  - intent: sale_top_customer_action
+  - action: action_sale_top_customer
+
+ # Question 8
+- rule: Say sale_average_discount_rate_action anytime the user action_sale_average_discount_rate_action
+  steps:
+  - intent: sale_average_discount_rate_action
+  - action: action_sale_average_discount_rate_action
+
+ # Question 9
+- rule: Say sale_avg_gross_margin_action anytime the user action_sale_avg_gross_margin_action
+  steps:
+  - intent: sale_avg_gross_margin_action
+  - action: action_sale_avg_gross_margin_action
+
+ # Question 10
+- rule: Say sale_revenue_by_category_action anytime the user action_sale_revenue_by_category_action
+  steps:
+  - intent: sale_revenue_by_category_action
+  - action: action_sale_revenue_by_category_action
+
+ # Question 11
+- rule: Say sale_canceled_sales_order_action anytime the user action_sale_canceled_sales_order_action
+  steps:
+  - intent: sale_canceled_sales_order_action
+  - action: action_sale_canceled_sales_order_action
+# =================================================//sales//==================================================
+
+# =================================================purchase==================================================
+
+# Question 1
+- rule: Say purchase_purchase_amount_quater anytime the user action_purchase_purchase_amount_quater
+  steps:
+  - intent: purchase_purchase_amount_quater
+  - action: action_purchase_purchase_amount_quater
+
+# Question 2
+- rule: Say action_purchase_highest_quantity_supplier_this_year anytime the user purchase_highest_quantity_supplier_this_year
+  steps:
+  - intent: purchase_highest_quantity_supplier_this_year
+  - action: action_purchase_highest_quantity_supplier_this_year
+
+# Question 3
+- rule: Say purchase_average_lead_time_action anytime the user action_purchase_average_lead_time_action
+  steps:
+  - intent: purchase_average_lead_time_action
+  - action: action_purchase_average_lead_time_action
+
+# Question 4
+- rule: Say action_highest_purchase_volume_product_this_year anytime the user highest_purchase_volume_product_this_year
+  steps:
+  - intent: highest_purchase_volume_product_this_year
+  - action: action_highest_purchase_volume_product_this_year
+
+  # Question 5
+- rule: Say action_credit_purchases_percentage_this_month anytime the user credit_purchases_percentage_this_month
+  steps:
+  - intent: credit_purchases_percentage_this_month
+  - action: action_credit_purchases_percentage_this_month
+
+  # Question 6
+- rule: Say action_canceled_purchase_orders_this_quarter anytime the user canceled_purchase_orders_this_quarter
+  steps:
+  - intent: canceled_purchase_orders_this_quarter
+  - action: action_canceled_purchase_orders_this_quarter
+
+  # Question 7
+- rule: Say action_average_discount_rate_suppliers_this_year anytime the user average_discount_rate_suppliers_this_year
+  steps:
+  - intent: average_discount_rate_suppliers_this_year
+  - action: action_average_discount_rate_suppliers_this_year
+
+  # Question 8
+- rule: Say action_highest_purchase_volume_department_this_quarter anytime the user highest_purchase_volume_department_this_quarter
+  steps:
+  - intent: highest_purchase_volume_department_this_quarter
+  - action: action_highest_purchase_volume_department_this_quarter
+
+  # Question 9
+- rule: Say action_late_purchase_orders_received_this_year anytime the user late_purchase_orders_received_this_year
+  steps:
+  - intent: late_purchase_orders_received_this_year
+  - action: action_late_purchase_orders_received_this_year
+
+  # Question 10
+- rule: Say purchase_average_lead_time_action anytime the user action_purchase_average_lead_time_action
+  steps:
+  - intent: purchase_average_lead_time_action
+  - action: action_purchase_average_lead_time_action
+
+  # Question 11
+- rule: Say action_highest_average_delivery_time_supplier_this_year anytime the user highest_average_delivery_time_supplier_this_year
+  steps:
+  - intent: highest_average_delivery_time_supplier_this_year
+  - action: action_highest_average_delivery_time_supplier_this_year
+
+# =================================================//purchase//==================================================
+
+# =================================================Inventory==================================================
+
+  # Question 1
+- rule: Say action_inventory_current_inventory_products anytime the user highest_average_delivery_time_supplier_this_year
+  steps:
+  - intent: inventory_current_inventory_products
+  - action: action_inventory_current_inventory_products
+
+  # Question 2
+- rule: Say action_inventory_highest_demand_product_this_month anytime the user inventory_highest_demand_product_this_month
+  steps:
+  - intent: inventory_highest_demand_product_this_month
+  - action: action_inventory_highest_demand_product_this_month
+
+  # Question 3
+- rule: Say action_inventory_average_delivery_time_this_quarter anytime the user inventory_average_delivery_time_this_quarter
+  steps:
+  - intent: inventory_average_delivery_time_this_quarter
+  - action: action_inventory_average_delivery_time_this_quarter
+
+  # Question 4
+- rule: Say action_inventory_turnover_ratio anytime the user inventory_turnover_ratio_highest_selling_product_this_year
+  steps:
+  - intent: inventory_turnover_ratio_highest_selling_product_this_year
+  - action: action_inventory_turnover_ratio
+
+  # Question 5
+- rule: Say action_inventory_average_lead_time_for_receiving_goods_from_suppliers_this_quarter anytime the user action_inventory_average_lead_time_for_receiving_goods_from_suppliers_this_quarter
+  steps:
+  - intent: inventory_average_lead_time_for_receiving_goods_from_suppliers_this_quarter
+  - action: action_inventory_average_lead_time_for_receiving_goods_from_suppliers_this_quarter
+
+  # Question 6
+- rule: Say action_inventory_number_of_units_currently_in_transit anytime the user inventory_number_of_units_currently_in_transit
+  steps:
+  - intent: inventory_number_of_units_currently_in_transit
+  - action: action_inventory_number_of_units_currently_in_transit
+
+  # Question 7
+- rule: Say action_inventory_product_highest_return_rate_this_year anytime the user inventory_product_highest_return_rate_this_year
+  steps:
+  - intent: inventory_product_highest_return_rate_this_year
+  - action: action_inventory_product_highest_return_rate_this_year
+
+  # Question 8
+- rule: Say action_inventory_average_time_to_fulfill_customer_orders_this_month anytime the user inventory_average_time_to_fulfill_customer_orders_this_month
+  steps:
+  - intent: inventory_average_time_to_fulfill_customer_orders_this_month
+  - action: action_inventory_average_time_to_fulfill_customer_orders_this_month
+
+  # Question 9
+- rule: Say action_inventory_location_highest_inventory_holding_cost_this_quarter anytime the user inventory_location_highest_inventory_holding_cost_this_quarter
+  steps:
+  - intent: inventory_location_highest_inventory_holding_cost_this_quarter
+  - action: action_inventory_location_highest_inventory_holding_cost_this_quarter
+
+  # Question 10
+- rule: Say action_inventory_current_inventory_level_top_10_selling_products anytime the user inventory_current_inventory_level_top_10_selling_products
+  steps:
+  - intent: inventory_current_inventory_level_top_10_selling_products
+  - action: action_inventory_current_inventory_level_top_10_selling_products
+
+# =================================================//Inventory//==================================================
+
+# =================================================Account + invoice==================================================
+
+# Question 1
+
+- rule: Say action_ai_total_revenue_this_month anytime the user ai_total_revenue_this_month
+  steps:
+  - intent: ai_total_revenue_this_month
+  - action: action_ai_total_revenue_this_month
+
+# Question 2
+
+- rule: Say action_ai_customer_highest_outstanding_balance_this_year anytime the user action_ai_customer_highest_outstanding_balance_this_year
+  steps:
+  - intent: ai_customer_highest_outstanding_balance_this_year
+  - action: action_ai_customer_highest_outstanding_balance_this_year
+
+# Question 3
+
+- rule: Say action_ai_average_collection_time_invoices_this_quarter anytime the user action_ai_average_collection_time_invoices_this_quarter
+  steps:
+  - intent: ai_average_collection_time_invoices_this_quarter
+  - action: action_ai_average_collection_time_invoices_this_quarter
+
+
+# Question 4
+
+- rule: Say action_ai_product_category_highest_sales_volume_this_year anytime the user ai_product_category_highest_sales_volume_this_year
+  steps:
+  - intent: ai_product_category_highest_sales_volume_this_year
+  - action: action_ai_product_category_highest_sales_volume_this_year
+
+
+# Question 5
+
+- rule: Say action_ai_number_of_invoices_issued_this_quarter anytime the user ai_number_of_invoices_issued_this_quarter
+  steps:
+  - intent: ai_number_of_invoices_issued_this_quarter
+  - action: action_ai_number_of_invoices_issued_this_quarter
+
+# Question 6
+
+- rule: Say action_ai_average_invoice_amount_per_customer_this_year anytime the user ai_average_invoice_amount_per_customer_this_year
+  steps:
+  - intent: ai_average_invoice_amount_per_customer_this_year
+  - action: action_ai_average_invoice_amount_per_customer_this_year
+
+# Question 7
+
+- rule: Say action_ai_number_of_overdue_invoices_currently anytime the user ai_number_of_overdue_invoices_currently
+  steps:
+  - intent: ai_number_of_overdue_invoices_currently
+  - action: action_ai_number_of_overdue_invoices_currently
+
+# Question 8
+
+- rule: Say action_ai_salesperson_highest_revenue_this_year anytime the user ai_salesperson_highest_revenue_this_year
+  steps:
+  - intent: ai_salesperson_highest_revenue_this_year
+  - action: action_ai_salesperson_highest_revenue_this_year
+
+# Question 9
+
+- rule: Say action_ai_average_discount_rate_offered_to_customers_this_quarter anytime the user ai_average_discount_rate_offered_to_customers_this_quarter
+  steps:
+  - intent: ai_average_discount_rate_offered_to_customers_this_quarter
+  - action: action_ai_average_discount_rate_offered_to_customers_this_quarter
+
+# Question 10
+
+- rule: Say action_ai_most_common_payment_method_used_by_customers_this_year anytime the user ai_most_common_payment_method_used_by_customers_this_year
+  steps:
+  - intent: ai_most_common_payment_method_used_by_customers_this_year
+  - action: action_ai_most_common_payment_method_used_by_customers_this_year
+
+# Question 11
+
+- rule: Say action_ai_inventory_current_balance_profit_and_loss anytime the user ai_inventory_current_balance_profit_and_loss
+  steps:
+  - intent: ai_inventory_current_balance_profit_and_loss
+  - action: action_ai_inventory_current_balance_profit_and_loss
+
+# =================================================//Account + invoice//==================================================
+
+- rule: Say act_quatation_num anytime the quatation_num
+  steps:
+  - intent: quatation_num
+  - action: act_quatation_num
+
+- rule: Say action_inventry_product anytime the inventry_product
+  steps:
+  - intent: inventry_product
+  - action: action_inventry_product
+
+- rule: Say action_quotation_status anytime the quotation_status
+  steps:
+  - intent: quotation_status
+  - action: action_quotation_status
+
+- rule: Say action_quotation_name_address anytime the quotation_name_address
+  steps:
+  - intent: quotation_name_address
+  - action: action_quotation_name_address
+
+- rule: Say action_latest_quotation_revision anytime the latest_quotation_revision
+  steps:
+  - intent: latest_quotation_revision
+  - action: action_latest_quotation_revision
+
+- rule: Say action_no_quotation_today , today anytime the no_quotation_today
+  steps:
+  - intent: no_quotation_today
+  - action: action_no_quotation_today
+
+- rule: Say action_no_quotation_month , month anytime the no_quotation_month
+  steps:
+  - intent: no_quotation_month
+  - action: action_no_quotation_month
+
+- rule: Say action_no_quotation_quarter , quarter anytime the no_quotation_quartlyi
+  steps:
+  - intent: no_quotation_quartlyi
+  - action: action_no_quotation_quarter
+
+- rule: Count the quotations
+  steps:
+  - intent: quotation_count
+  - action: act_quatation_num
+
+- rule: Say action_value_quotation  anytime the value_quotation
+  steps:
+  - intent: value_quotation
+  - action: action_value_quotation
+
+- rule: Say action_value_quotation  anytime the value_quotation
+  steps:
+  - intent: last_quotation
+  - action: action_last_quotation
+
+- rule: Say default anytime the user wrong phrase
+  steps:
+  - action: action_fallback
+
+- rule: Type quotations
+  steps:
+  - intent: quotation_type
+  - action: act_quatation_type
+
+- rule: Say action_sjo_list  anytime the sjo_list
+  steps:
+  - intent: sjo_list
+  - action: action_sjo_list
+  
+- rule: Say action_purchase_status  anytime the purchase_status
+  steps:
+  - intent: purchase_status
+  - action: action_purchase_status
+  
+- rule: Say action_list_quatation  anytime the list_quatation
+  steps:
+  - intent: list_quatation
+  - action: action_list_quatation
+
+- rule: Say action_value_sale  anytime the value_sale
+  steps:
+  - intent: value_sale
+  - action: action_value_sale
+
+- rule: revenue quotations
+  steps:
+  - intent: revenue_quotation
+  - action: act_quatation_rev
+
+- rule: revenue quotations count
+  steps:
+  - intent: revisions_quotation
+  - action: act_quatation_rev_count
+
+- rule: quotations count today
+  steps:
+  - intent: quotation_count_today
+  - action: act_quatation_count_today
+
+- rule: quotations count month
+  steps:
+  - intent: quotation_count_monthly
+  - action: act_quatation_count_month
+
+- rule: quotations count quaterly
+  steps:
+  - intent: quotation_count_quaterly
+  - action: act_quatation_count_quaterly
+
+# - rule: quotations
+#   steps:
+#   - intent: quotation
+#   - action: utter_quotation 
